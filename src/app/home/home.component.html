@@ -27,7 +27,7 @@
 
 <div class="text" style="z-index: 999;position: absolute;color: white;top: 0px;right: 50px;position: fixed">
   <div class="zhengbutton" style="margin-left: 60%;margin-right: 35%;background: white;height: 165px;width: 300px;">
-    <button style="width: 100%;height: 100%;background: pink;color: black;font-size: 45px;" class="btn" (click)="zheng()"><p style="margin-left:40px;width:80px">蒸<span style="font-size: 1.3rem">&nbsp;房</span><br><p style="font-size: 0.9rem;margin-top: -5px">nano-spa room</p></button>
+    <button style="width: 100%;height: 100%;background: orangered;color: black;font-size: 45px;" class="btn" (click)="zheng()"><p style="margin-left:40px;width:80px">蒸<span style="font-size: 1.3rem">&nbsp;房</span><br><p style="font-size: 0.9rem;margin-top: -5px">nano-spa room</p></button>
   </div>
 </div>
 
@@ -39,7 +39,7 @@
 
 <div class="text" style="z-index: 999;position: absolute;color: white;top: 330px;right: 50px;position: fixed">
   <div class="zhengbutton" style="margin-left: 60%;margin-right: 35%;background: white;height: 165px;width: 300px;">
-    <button style="width: 100%;height: 100%;background: orange;color: black;font-size: 45px;" class="btn" (click)="yi()"><p style="margin-left:40px;width:80px">暖<span style="font-size: 1.3rem">&nbsp;衣</span><br><p style="font-size: 0.9rem;margin-top: -5px">nano-cloth warm</p></button>
+    <button style="width: 100%;height: 100%;background: pink;color: black;font-size: 45px;" class="btn" (click)="yi()"><p style="margin-left:40px;width:80px">暖<span style="font-size: 1.3rem">&nbsp;衣</span><br><p style="font-size: 0.9rem;margin-top: -5px">nano-cloth warm</p></button>
   </div>
 </div>
 
@@ -49,14 +49,35 @@
   </div>
 </div>
 
-<div class="text" style="z-index: 999;position: absolute;color: white;top: 300px;">
-  <div id="smallphotobackground" style="margin-left: 85%; margin-right: 35%; width: 614px; height: 800px; background: mediumpurple;">
-    <img src="./../../assets/hanzhen/hanzhen9.jpg" style="width: 600px;margin-left: 1%;margin-right: 10%;padding-top: 5px">
-    <img src="./../../assets/hanzhen/hanzhen8.jpg" style="width: 600px;margin-left: 1%;margin-right: 10%;padding-top: 0px;margin-top: 5px">
+
+  <div class="text" [hidden]="!zhengtushow" style="z-index: 999;position: absolute;color: white;top: 300px;">
+    <div id="smallphotobackground1" style="margin-left: 85%; margin-right: 35%; width: 614px; height: 800px; background: white">
+      <img src="./../../assets/hanzhen/hanzhen9.jpg" style="width: 600px;margin-left: 1%;margin-right: 10%;padding-top: 5px">
+      <img src="./../../assets/hanzhen/hanzhen8.jpg" style="width: 600px;margin-left: 1%;margin-right: 10%;padding-top: 0px;margin-top: 5px">
+    </div>
+  </div>
+
+<div class="text" [hidden]="!shitushow" style="z-index: 999;position: absolute;color: white;top: 300px;">
+  <div id="smallphotobackground2" style="margin-left: 85%; margin-right: 35%; width: 614px; height: 800px;background: white">
+    <img src="./../../assets/chanpin/CP4_1.png" style="width: 600px;margin-left: 1%;margin-right: 10%;padding-top: 5px">
+    <img src="./../../assets/chanpin/CP21_1.png" style="width: 600px;margin-left: 1%;margin-right: 10%;padding-top: 0px;margin-top: 5px">
+  </div>
+</div>
+
+  <div class="text" [hidden]="!yitushow" style="z-index: 999;position: absolute;color: white;top: 300px;">
+    <div id="smallphotobackground3" style="margin-left: 85%; margin-right: 35%; width: 614px; height: 800px; background: white">
+      <img src="./../../assets/chanpin/CP6_1.png" style="width: 600px;margin-left: 1%;margin-right: 10%;padding-top: 5px">
+      <img src="./../../assets/chanpin/CP7_1.png" style="width: 600px;margin-left: 1%;margin-right: 10%;padding-top: 0px;margin-top: 5px">
+    </div>
   </div>
 
 
-</div>
+  <div class="text" [hidden]="!zhutushow" style="z-index: 999;position: absolute;color: white;top: 300px;">
+    <div id="smallphotobackground4" style="margin-left: 85%; margin-right: 35%; width: 614px; height: 800px;background: white">
+      <img src="./../../assets/chanpin/CP1_1.png" style="width: 600px;margin-left: 1%;margin-right: 10%;padding-top: 5px">
+      <img src="./../../assets/chanpin/CP11_1.png" style="width: 600px;margin-left: 1%;margin-right: 10%;padding-top: 0px;margin-top: 5px">
+    </div>
+  </div>
 </div>
 
 
