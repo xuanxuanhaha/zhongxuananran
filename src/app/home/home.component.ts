@@ -19,8 +19,8 @@ export class HomeComponent implements OnInit {
     document.getElementById('smallphotobackground').style.background = 'pink';
   }
   zhu(){
-    document.body.style.background = 'cornflowerblue';
-    document.getElementById('smallphotobackground').style.background = 'cornflowerblue';
+    document.body.style.background = 'cadetblue';
+    document.getElementById('smallphotobackground').style.background = 'cadetblue';
   }
   yi(){
     document.body.style.background = 'orange';
