@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor() { }
+
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    // if ((window.innerHeight + window.scrollY) <= document.body.offsetHeight) {
+    //   // you're at the bottom of the page
+    //
+    //   document.getElementById('smallphotobackground').style.background = 'pink';
+    // }
+    console.log(window.scrollY);
+    if(window.scrollY > 30){
+      document.getElementById('navbarbackground').style.backgroundColor = 'black';
+    }else{
+      document.getElementById('navbarbackground').style.backgroundColor = 'transparent';
+    }
+  }
 
   ngOnInit() {
     const a = window.innerHeight;
@@ -30,4 +45,5 @@ export class HomeComponent implements OnInit {
     document.body.style.background = 'mediumpurple';
     document.getElementById('smallphotobackground').style.background = 'mediumpurple';
   }
+
 }
