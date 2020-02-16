@@ -12,6 +12,7 @@ export class ProductComponent implements OnInit {
   yidivephotochange = false;
   zhengphotoshow = false;
   yiphotoshow = false;
+  shiphotoshow = false;
   constructor() { }
   @HostListener('window:scroll', [])
   onScroll(): void {
@@ -20,9 +21,9 @@ export class ProductComponent implements OnInit {
     //
     //   document.getElementById('smallphotobackground').style.background = 'pink';
     // }
-    // console.log( document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight);
-    // console.log(window.innerHeight);
-    // console.log(window.scrollY + (1 / 2 * window.innerHeight));
+    console.log( document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight + document.getElementById('yi').clientHeight );
+    console.log(window.innerHeight);
+    console.log(window.scrollY + (1 / 2 * window.innerHeight));
     if(window.scrollY > 100){
       document.getElementById('navbarbackground').style.display = 'none';
     }else{
@@ -40,23 +41,39 @@ export class ProductComponent implements OnInit {
     //   this.yidivephotochange = false;
     // }
 
-    if(window.scrollY + (1 / 2 * window.innerHeight) > document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight) {
+
+    if (window.scrollY + (1 / 2 * window.innerHeight) > document.getElementById('yi').clientHeight + document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight) {
+      console.log('shi');
+      this.yiphotoshow = false;
+      this.shiphotoshow = true;
+      this.zhengphotoshow = false;
+      document.getElementById('bloc2').style.display = 'none';
+      document.getElementById('bloc4').style.display = 'none';
+      document.getElementById('bloc6').style.display = 'inline';
+    }else if(window.scrollY + (1 / 2 * window.innerHeight) > document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight) {
       console.log('yi');
       this.yiphotoshow = true;
+      this.shiphotoshow = false;
       this.zhengphotoshow = false;
       document.getElementById('bloc2').style.display = 'none';
       document.getElementById('bloc4').style.display = 'inline';
-    }else{
+      document.getElementById('bloc6').style.display = 'none';
+    }
+    else{
       this.yiphotoshow = false;
+      this.shiphotoshow = false;
       this.zhengphotoshow = true;
       document.getElementById('bloc4').style.display = 'none';
       document.getElementById('bloc2').style.display = 'inline';
+      document.getElementById('bloc6').style.display = 'none';
     }
   }
   ngOnInit() {
     this.fourbuttonshow = false;
     console.log(window.location.href);
     console.log(document.referrer);
+    document.getElementById('bloc6').style.display = 'none';
+    document.getElementById('bloc4').style.display = 'none';
   }
 
   chooseallproducts(){
@@ -78,6 +95,7 @@ export class ProductComponent implements OnInit {
     // this.yidivephotochange = true;
     document.getElementById('bloc4').style.display = 'none';
     document.getElementById('bloc2').style.display = 'inline';
+    document.getElementById('bloc6').style.display = 'none';
   }
 
   yi(){
@@ -85,9 +103,11 @@ export class ProductComponent implements OnInit {
     const elmnt = document.getElementById('yi');
     elmnt.scrollIntoView();
     this.yiphotoshow = true;
+    this.shiphotoshow = false;
     this.zhengphotoshow = false;
     document.getElementById('bloc2').style.display = 'none';
     document.getElementById('bloc4').style.display = 'inline';
+    document.getElementById('bloc6').style.display = 'none';
   }
 
 }
