@@ -6,6 +6,7 @@
 
 
 
+
   <div class="Row" id="navbarbackground" style="z-index: 999;position: fixed;color: white;opacity: 70%;width: 100%">
     <div class="text Column">
       <button class="btn navbarbutton" >
@@ -26,6 +27,7 @@
       </button>
     </div>
   </div>
+
 
 <div class="text" style="z-index: 999;position: absolute;color: white;top: 0px;right: 50px;position: fixed">
   <div class="zhengbutton" style="margin-left: 60%;margin-right: 35%;background: white;height: 165px;width: 300px;">
@@ -82,7 +84,26 @@
   </div>
 </div>
 
-
+<div class="Row" id="navbarbackground" style="z-index: 999;position: fixed;color: white;opacity: 70%;width: 100%">
+  <div class="text Column">
+    <button class="btn navbarbutton" [routerLink]="['/home']">
+      关于我们
+      <span class="highlight" style="font-size: 15px">About Us</span>
+    </button>
+  </div>
+  <div class="text Column">
+    <button class="btn navbarbutton" [routerLink]="['/product']">
+      产品介绍
+      <span class="highlight" style="font-size: 15px">Our Product</span>
+    </button>
+  </div>
+  <div class="text Column">
+    <button class="btn navbarbutton" [routerLink]="['/contact']">
+      联系我们
+      <span class="highlight" style="font-size: 15px">Contact us</span>
+    </button>
+  </div>
+</div>
 
 
 <div id="bottomcontact" style="color: black;font-size: 1.5rem;position: fixed;z-index: 999;background: black;color: white;width: 100%;margin-left: 0;opacity: 75%;padding: 10px;font-size: 20px">
