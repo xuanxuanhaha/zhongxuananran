@@ -7,26 +7,7 @@
 
 
 
-  <div class="Row" id="navbarbackground" style="z-index: 999;position: fixed;color: white;opacity: 70%;width: 100%">
-    <div class="text Column">
-      <button class="btn navbarbutton" >
-        关于我们
-        <span class="highlight" style="font-size: 15px">About Us</span>
-      </button>
-    </div>
-    <div class="text Column">
-      <button class="btn navbarbutton">
-        产品介绍
-        <span class="highlight" style="font-size: 15px">Our Product</span>
-      </button>
-    </div>
-    <div class="text Column">
-      <button class="btn navbarbutton">
-        联系我们
-        <span class="highlight" style="font-size: 15px">Contact us</span>
-      </button>
-    </div>
-  </div>
+
 
 
 <div class="text" style="z-index: 999;position: absolute;color: white;top: 0px;right: 50px;position: fixed">
@@ -114,3 +95,23 @@
   support@ancc.com.au
 </div>
 
+<div class="Row" id="navbarbackground" style="z-index: 999;position: fixed;color: white;opacity: 70%;width: 100%">
+  <div class="text Column">
+    <a class="btn navbarbutton" [routerLink]="['/home']">
+      关于我们
+      <span class="highlight" style="font-size: 15px">About Us</span>
+    </a>
+  </div>
+  <div class="text Column">
+    <button class="btn navbarbutton" [routerLink]="['/product']">
+      产品介绍
+      <span class="highlight" style="font-size: 15px">Our Product</span>
+    </button>
+  </div>
+  <div class="text Column">
+    <button class="btn navbarbutton" [routerLink]="['/contact']">
+      联系我们
+      <span class="highlight" style="font-size: 15px">Contact us</span>
+    </button>
+  </div>
+</div>
