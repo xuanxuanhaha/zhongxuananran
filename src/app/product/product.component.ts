@@ -38,6 +38,8 @@ export class ProductComponent implements OnInit {
   }
   ngOnInit() {
     this.fourbuttonshow = false;
+    console.log(window.location.href);
+    console.log(document.referrer);
   }
 
   chooseallproducts(){
