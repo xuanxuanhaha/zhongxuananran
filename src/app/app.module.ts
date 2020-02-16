@@ -16,7 +16,8 @@ import { ProductComponent } from './product/product.component';
     BrowserModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'home', component: HomeComponent }
+      { path: 'home', component: HomeComponent },
+      { path: 'product', component: ProductComponent }
     ])
   ],
   providers: [],
