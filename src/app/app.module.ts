@@ -6,13 +6,15 @@ import { HomeComponent } from './home/home.component';
 import {RouterModule} from '@angular/router';
 import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
+import { SitemapComponent } from './sitemap/sitemap.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProductComponent,
-    ContactComponent
+    ContactComponent,
+    SitemapComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +22,8 @@ import { ContactComponent } from './contact/contact.component';
       { path: '', component: HomeComponent },
       { path: 'home', component: HomeComponent },
       { path: 'product', component: ProductComponent },
-      { path: 'contact', component: ContactComponent}
+      { path: 'contact', component: ContactComponent},
+      { path: 'sitemap', component: SitemapComponent}
     ])
   ],
   providers: [],
