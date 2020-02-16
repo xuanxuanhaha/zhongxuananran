@@ -14,6 +14,8 @@ export class ProductComponent implements OnInit {
   yiphotoshow = false;
   shiphotoshow = false;
   zhuphotoshow = false;
+
+  bgNo = 1;
   constructor() { }
   @HostListener('window:scroll', [])
   onScroll(): void {
@@ -52,6 +54,7 @@ export class ProductComponent implements OnInit {
       document.getElementById('bloc4').style.display = 'none';
       document.getElementById('bloc6').style.display = 'none';
       document.getElementById('bloc8').style.display = 'inline';
+      this.bgNo = 1;
     } else if (window.scrollY + (1 / 2 * window.innerHeight) > document.getElementById('yi').clientHeight + document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight) {
       console.log('shi');
       this.yiphotoshow = false;
@@ -62,6 +65,7 @@ export class ProductComponent implements OnInit {
       document.getElementById('bloc4').style.display = 'none';
       document.getElementById('bloc6').style.display = 'inline';
       document.getElementById('bloc8').style.display = 'none';
+      this.bgNo = 2;
     }else if(window.scrollY + (1 / 2 * window.innerHeight) > document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight) {
       console.log('yi');
       this.yiphotoshow = true;
@@ -72,6 +76,7 @@ export class ProductComponent implements OnInit {
       document.getElementById('bloc4').style.display = 'inline';
       document.getElementById('bloc6').style.display = 'none';
       document.getElementById('bloc8').style.display = 'none';
+      this.bgNo = 3;
     }
     else{
       this.yiphotoshow = false;
@@ -82,6 +87,7 @@ export class ProductComponent implements OnInit {
       document.getElementById('bloc2').style.display = 'inline';
       document.getElementById('bloc6').style.display = 'none';
       document.getElementById('bloc8').style.display = 'none';
+      this.bgNo = 4;
     }
   }
   ngOnInit() {
@@ -115,6 +121,7 @@ export class ProductComponent implements OnInit {
     document.getElementById('bloc2').style.display = 'inline';
     document.getElementById('bloc6').style.display = 'none';
     document.getElementById('bloc8').style.display = 'none';
+    this.bgNo = 1;
   }
 
   yi(){
@@ -128,6 +135,7 @@ export class ProductComponent implements OnInit {
     document.getElementById('bloc4').style.display = 'inline';
     document.getElementById('bloc6').style.display = 'none';
     document.getElementById('bloc8').style.display = 'none';
+    this.bgNo = 2;
   }
   shi(){
     // window.location.hash = 'yi';
@@ -140,6 +148,7 @@ export class ProductComponent implements OnInit {
     document.getElementById('bloc4').style.display = 'none';
     document.getElementById('bloc6').style.display = 'inline';
     document.getElementById('bloc8').style.display = 'none';
+    this.bgNo = 3;
   }
   zhu(){
     // window.location.hash = 'yi';
@@ -153,5 +162,6 @@ export class ProductComponent implements OnInit {
     document.getElementById('bloc4').style.display = 'none';
     document.getElementById('bloc6').style.display = 'none';
     document.getElementById('bloc8').style.display = 'inline';
+    this.bgNo = 4;
   }
 }

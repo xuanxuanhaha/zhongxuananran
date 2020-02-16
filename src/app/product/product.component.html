@@ -1,7 +1,13 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
-<img src="./../../assets/bg/bgproduct2.png" class="img-responsive" style="z-index: -1;position: fixed;width: 100%;height: 1000px">
+<img src="./../../assets/bg/bgproduct1.png" *ngIf="bgNo === 1" class="img-responsive" style="z-index: -1;position: fixed;width: 100%;height: 1000px">
+
+<img src="./../../assets/bg/bgproduct2.png" *ngIf="bgNo === 2" class="img-responsive" style="z-index: -1;position: fixed;width: 100%;height: 1000px">
+
+<img src="./../../assets/bg/bgproduct3.png" *ngIf="bgNo === 3" class="img-responsive" style="z-index: -1;position: fixed;width: 100%;height: 1000px">
+
+<img src="./../../assets/bg/bg1_1.jpg" *ngIf="bgNo === 4" class="img-responsive" style="z-index: -1;position: fixed;width: 100%;height: 1000px">
 
 <div id="navbarid" class="one" style="height: 150px">
 <div class="Row" id="navbarbackground" style="z-index: 999;position: fixed;color: white;opacity: 70%;width: 80%">
