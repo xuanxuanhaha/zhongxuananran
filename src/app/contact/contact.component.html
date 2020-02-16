@@ -21,25 +21,88 @@
       </button>
     </div>
   </div>
+</div>
 
-  <div class="row" style="position: relative;top: 100px; text-align: center">
-    <div class="col-md-4">
-      <a href="#" class="btn btn-info btn-lg">
-        <span class="glyphicon glyphicon-envelope"></span> Envelope
-      </a>
+
+
+<div>
+  <br>
+  <h1 style="margin-left: 30%;color: whitesmoke;margin-top: 50px">联系我们</h1>
+  <hr  style="height:1px;color:#0072b8; background-color:#0072b8; margin-left: 500px; margin-right:500px" >
+  <div class="container" style=" background:transparent;">
+    <div class="userinputForm" style="background:transparent;opacity: 70%">
+      <form #frm="ngForm"  id="myForm" style="background:transparent">
+        <div class="form-group">
+          <input type="text" name="name" class="form-control" ngModel placeholder="Full Name *"
+                 required pattern="[a-zA-Z][a-zA-Z ]+" id="usersName"
+          >
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="email" class="form-control" ngModel  placeholder="Email *"
+                 required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" id="usersEmail"
+          >
+        </div>
+
+
+        <div class="form-group">
+          <input type="text" name="contact" class="form-control" ngModel  placeholder="Phone (optional). For example: 0400000000"
+                 maxlength="10" minlength="10" pattern="[0-9]*" id="usersPhone"
+          >
+        </div>
+
+
+        <div class="form-group">
+          <input type="text" name="company" class="form-control" ngModel placeholder="Company (optional)" id="usersCompany">
+        </div>
+
+        <div class="form-group">
+          <select class="form-control" id="Select1" name="enquiry_type" required ngModel >
+            <option value="" hidden selected>Select enquiry type</option>
+            <option value="General enquiry"> General enquiry</option>
+            <option value="Business enquiry">Business enquiry</option>
+            <option value="Police Check enquiry">Police Check enquiry</option>
+            <!--
+            <option value="Bankruptcy Check enquiry">Bankruptcy Check enquiry</option>
+            <option value="VEVO Check enquiry">VEVO Check enquiry</option>
+            -->
+            <option value="Feedback">Feedback</option>
+          </select>
+        </div>
+
+
+        <div class="form-group">
+              <textarea rows="5" type="text" name="enquiry" class="form-control" ngModel #enquiry="ngModel" placeholder="Type Enquiry *"
+                        required minlength="2" id="usersEnquiry"
+              ></textarea>
+        </div>
+
+        <span style="font-size:14px;">
+              <div class="g-recaptcha" data-sitekey="6Leoe7AUAAAAAIaXWfVUh17H7cS1pM_FIj8SS-NF">
+              </div>
+            </span>
+
+        <div class="form-group submitbtn" style="background: transparent">
+          <button type="submit" name="button" class="btn btn-lg btn-success ">Submit</button>
+        </div>
+
+      </form>
+<!--      <div  style="background-color:#68b545; border-radius: 5px; margin: auto; margin-top: 10px;  width: 100%; height: 100%; text-align: center; font-size: 1.2em; color: white;">-->
+
+<!--        <br>-->
+<!--        <br>-->
+<!--      </div>-->
+      <br>
+<!--      <div style="width:100%">-->
+<!--        <button  (click)="goHome()"  class="btn confirmbutton" > Back to Home page</button>-->
+<!--      </div>-->
+<!--      <br>-->
+<!--      <br>-->
+<!--      <div style="width:100%">-->
+<!--        <button (click)="addAnother()"  class="btn confirmbutton" > + Add Another Enquiry</button>-->
+<!--      </div>-->
+      <br>
+      <br>
     </div>
-
-    <div class="col-md-4">
-
-    </div>
-
-    <div class="col-md-4">
-
-    </div>
-
   </div>
-
-
-
-
 </div>
