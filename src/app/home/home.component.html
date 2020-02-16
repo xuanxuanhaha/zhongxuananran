@@ -1,51 +1,95 @@
-<img src="./../../assets/bg/bg1_1.jpg" class="img-responsive" style="width: 100%;z-index: -1;position: fixed;height: 660px">
-<div class="text" style="z-index: 999;top: 20px;position: absolute;color: white;left: 500px">
-  <p style="font-size: 30px">
-    关于我们
-    <span class="highlight" style="font-size: 20px">About Us</span>
-  </p>
+
+
+<div id="backgroundheight" style="margin: 0;padding: 0">
+<img src="./../../assets/bg/bg1_1.jpg" class="img-responsive" style="z-index: -1;position: fixed;height: 660px;">
+
+
+
+
+  <div class="Row" id="navbarbackground" style="z-index: 999;position: fixed;color: white;opacity: 70%;width: 100%">
+    <div class="text Column">
+      <button class="btn navbarbutton" >
+        关于我们
+        <span class="highlight" style="font-size: 15px">About Us</span>
+      </button>
+    </div>
+    <div class="text Column">
+      <button class="btn navbarbutton">
+        产品介绍
+        <span class="highlight" style="font-size: 15px">Our Product</span>
+      </button>
+    </div>
+    <div class="text Column">
+      <button class="btn navbarbutton">
+        联系我们
+        <span class="highlight" style="font-size: 15px">Contact us</span>
+      </button>
+    </div>
   </div>
-<div class="text" style="z-index: 999;top: 20px;position: absolute;color: white;left: 800px">
-  <p style="font-size: 30px">
-    产品介绍
-    <span class="highlight" style="font-size: 20px">Our Product</span>
-  </p>
-</div>
-<div class="text" style="z-index: 999;top: 20px;position: absolute;color: white;left: 1100px">
-  <p style="font-size: 30px">
-    联系我们
-    <span class="highlight" style="font-size: 20px">Contact us</span>
-  </p>
-</div>
 
-
-<div class="text" style="z-index: 999;position: absolute;color: white;top: 8px;right: 50px;position: fixed">
-  <div style="margin-left: 60%;margin-right: 35%;background: white;height: 165px;width: 80px;">
-    <button style="width: 100%;height: 100%;background: pink;color: black;font-size: 25px" class="btn">蒸</button>
-  </div>
-</div>
-
-<div class="text" style="z-index: 999;position: absolute;color: white;top: 173px;right: 50px;position: fixed">
-  <div style="margin-left: 60%;margin-right: 35%;background: white;height: 165px;width: 80px;">
-    <button style="width: 100%;height: 100%;background: cornflowerblue;color: black;font-size: 25px" class="btn">住</button>
-  </div>
-</div>
-
-<div class="text" style="z-index: 999;position: absolute;color: white;top: 338px;right: 50px;position: fixed">
-  <div style="margin-left: 60%;margin-right: 35%;background: white;height: 165px;width: 80px;">
-    <button style="width: 100%;height: 100%;background: orange;color: black;font-size: 25px" class="btn">衣</button>
+<div class="text" style="z-index: 999;position: absolute;color: white;top: 0px;right: 50px;position: fixed">
+  <div class="zhengbutton" style="margin-left: 60%;margin-right: 35%;background: white;height: 165px;width: 300px;">
+    <button style="width: 100%;height: 100%;background: orangered;color: black;font-size: 45px;" class="btn" (click)="zheng()"><p style="margin-left:40px;width:80px">蒸<span style="font-size: 1.3rem">&nbsp;房</span><br><p style="font-size: 0.9rem;margin-top: -5px">nano-spa room</p></button>
   </div>
 </div>
 
-<div class="text" style="z-index: 999;position: absolute;color: white;top: 503px;right: 50px;position: fixed">
-  <div style="margin-left: 60%;margin-right: 35%;background: white;height: 165px;width: 80px;">
-    <button style="width: 100%;height: 100%;background: mediumpurple;color: black;font-size: 25px" class="btn">食</button>
+<div class="text" style="z-index: 999;position: absolute;color: white;top: 165px;right: 50px;position: fixed">
+  <div class="zhengbutton" style="margin-left: 60%;margin-right: 35%;background: white;height: 165px;width: 300px;">
+    <button style="width: 100%;height: 100%;background: cadetblue;color: black;font-size: 45px;" class="btn" (click)="zhu()"><p style="margin-left:40px;width:80px">器<span style="font-size: 1.3rem">&nbsp;用</span><br><p style="font-size: 0.9rem;margin-top: -5px">nano-tool home</p></button>
   </div>
 </div>
 
-<div class="text" style="z-index: 999;position: absolute;color: white;top: 300px;">
-  <div style="margin-left: 60%;margin-right: 35%;background: white;width: 750px;height: 800px">
-    <img src="./../../assets/bg/bg1.jpg" style="width: 600px;margin-left: 10%;margin-right: 10%;padding-top: 30px">
-    <img src="./../../assets/bg/bg1.jpg" style="width: 600px;margin-left: 10%;margin-right: 10%;padding-top: 0px">
+<div class="text" style="z-index: 999;position: absolute;color: white;top: 330px;right: 50px;position: fixed">
+  <div class="zhengbutton" style="margin-left: 60%;margin-right: 35%;background: white;height: 165px;width: 300px;">
+    <button style="width: 100%;height: 100%;background: pink;color: black;font-size: 45px;" class="btn" (click)="yi()"><p style="margin-left:40px;width:80px">暖<span style="font-size: 1.3rem">&nbsp;衣</span><br><p style="font-size: 0.9rem;margin-top: -5px">nano-cloth warm</p></button>
   </div>
 </div>
+
+<div class="text" style="z-index: 999;position: absolute;color: white;top: 495px;right: 50px;position: fixed">
+  <div class="zhengbutton" style="margin-left: 60%;margin-right: 35%;background: white;height: 165px;width: 300px;">
+    <button style="width: 100%;height: 100%;background: mediumpurple;color: black;font-size: 45px;" class="btn" (click)="shi()"><p style="margin-left:40px;width:80px">康<span style="font-size: 1.3rem">&nbsp;品</span><br><p style="font-size: 0.9rem;margin-top: -5px">nano-food health</p></button>
+  </div>
+</div>
+
+
+  <div class="text" [hidden]="!zhengtushow" style="z-index: 999;position: absolute;color: white;top: 300px;">
+    <div id="smallphotobackground1" style="margin-left: 85%; margin-right: 35%; width: 614px; height: 800px; background: white">
+      <img src="./../../assets/hanzhen/hanzhen9.jpg" style="width: 600px;margin-left: 1%;margin-right: 10%;padding-top: 5px">
+      <img src="./../../assets/hanzhen/hanzhen8.jpg" style="width: 600px;margin-left: 1%;margin-right: 10%;padding-top: 0px;margin-top: 5px">
+    </div>
+  </div>
+
+<div class="text" [hidden]="!shitushow" style="z-index: 999;position: absolute;color: white;top: 300px;">
+  <div id="smallphotobackground2" style="margin-left: 85%; margin-right: 35%; width: 614px; height: 800px;background: white">
+    <img src="./../../assets/chanpin/CP4_1.png" style="width: 600px;margin-left: 1%;margin-right: 10%;padding-top: 5px">
+    <img src="./../../assets/chanpin/CP21_1.png" style="width: 600px;margin-left: 1%;margin-right: 10%;padding-top: 0px;margin-top: 5px">
+  </div>
+</div>
+
+  <div class="text" [hidden]="!yitushow" style="z-index: 999;position: absolute;color: white;top: 300px;">
+    <div id="smallphotobackground3" style="margin-left: 85%; margin-right: 35%; width: 614px; height: 800px; background: white">
+      <img src="./../../assets/chanpin/CP6_1.png" style="width: 600px;margin-left: 1%;margin-right: 10%;padding-top: 5px">
+      <img src="./../../assets/chanpin/CP7_1.png" style="width: 600px;margin-left: 1%;margin-right: 10%;padding-top: 0px;margin-top: 5px">
+    </div>
+  </div>
+
+
+  <div class="text" [hidden]="!zhutushow" style="z-index: 999;position: absolute;color: white;top: 300px;">
+    <div id="smallphotobackground4" style="margin-left: 85%; margin-right: 35%; width: 614px; height: 800px;background: white">
+      <img src="./../../assets/chanpin/CP1_1.png" style="width: 600px;margin-left: 1%;margin-right: 10%;padding-top: 5px">
+      <img src="./../../assets/chanpin/CP11_1.png" style="width: 600px;margin-left: 1%;margin-right: 10%;padding-top: 0px;margin-top: 5px">
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="bottomcontact" style="color: black;font-size: 1.5rem;position: fixed;z-index: 999;background: black;color: white;width: 100%;margin-left: 0;opacity: 75%;padding: 10px;font-size: 20px">
+  Support contacts
+  &nbsp;&nbsp;&nbsp;
+  1800 940 522
+  &nbsp;&nbsp;&nbsp;
+  support@ancc.com.au
+</div>
+

@@ -1,4 +1,4 @@
-
+@import '~bootstrap/dist/css/bootstrap.min.css';
 .zhengbutton {
   opacity:40%;
 }
@@ -16,5 +16,15 @@
   display: table-cell;
 }
 .navbarbutton{
-  color: white;background: transparent;border: 1px solid transparent;font-size: 20px;padding: 20px;
+  color: white;background: transparent;border: 1px solid transparent;font-size: 20px;padding: 20px;font-weight: bold;
+}
+
+
+#block_container
+{
+  text-align:center;
+}
+#bloc1, #bloc2
+{
+  display:inline;
 }
