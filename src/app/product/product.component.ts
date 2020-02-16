@@ -8,8 +8,8 @@ import {Component, HostListener, OnInit} from '@angular/core';
 export class ProductComponent implements OnInit {
 
   fourbuttonshow = false;
-  morethan400 = false;
-  morethan400photochange = false;
+  yidiv = false;
+  yidivephotochange = false;
   constructor() { }
   @HostListener('window:scroll', [])
   onScroll(): void {
@@ -23,17 +23,19 @@ export class ProductComponent implements OnInit {
     console.log(window.scrollY + (1 / 2 * window.innerHeight));
     if(window.scrollY > 100){
       document.getElementById('navbarbackground').style.display = 'none';
-      if(window.scrollY + (1 / 2 * window.innerHeight) > document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight){
-        console.log('more than 400');
-        this.morethan400photochange = true;
-      } else if (window.scrollY + (window.innerHeight) > document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight){
-        console.log('more than 400');
-        this.morethan400 = true;
-      }
     }else{
       document.getElementById('navbarbackground').style.display = 'inline';
-      this.morethan400 = false;
-      this.morethan400photochange = false;
+    }
+
+    if(window.scrollY + (1 / 2 * window.innerHeight) > document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight){
+      console.log('more than 400');
+      this.yidivephotochange = true;
+    } else if (window.scrollY + (window.innerHeight) > document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight){
+      console.log('more than 400');
+      this.yidiv = true;
+    } else{
+      this.yidiv = false;
+      this.yidivephotochange = false;
     }
   }
   ngOnInit() {
