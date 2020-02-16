@@ -1,0 +1,30 @@
+
+.zhengbutton {
+  opacity:40%;
+}
+.zhengbutton:hover{
+  opacity: 100%;
+  transition: 1s;
+}
+.Row {
+  /*display: table;*/
+  width: 100%; /*Optional*/
+  /*table-layout: fixed; !*Optional*!*/
+  /*border-spacing: 10px; !*Optional*!*/
+}
+.Column {
+  display: table-cell;
+}
+.navbarbutton{
+  color: white;background: transparent;border: 1px solid transparent;font-size: 20px;padding: 20px;font-weight: bold;
+}
+
+
+#block_container
+{
+  text-align:center;
+}
+#bloc1, #bloc2
+{
+  display:inline;
+}
