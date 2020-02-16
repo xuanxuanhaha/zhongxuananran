@@ -13,6 +13,7 @@ export class ProductComponent implements OnInit {
   zhengphotoshow = false;
   yiphotoshow = false;
   shiphotoshow = false;
+  zhuphotoshow = false;
   constructor() { }
   @HostListener('window:scroll', [])
   onScroll(): void {
@@ -41,31 +42,46 @@ export class ProductComponent implements OnInit {
     //   this.yidivephotochange = false;
     // }
 
-
-    if (window.scrollY + (1 / 2 * window.innerHeight) > document.getElementById('yi').clientHeight + document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight) {
+    if(window.scrollY + (1 / 2 * window.innerHeight) >document.getElementById('zhu').clientHeight + document.getElementById('yi').clientHeight + document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight) {
+      console.log('zhu');
+      this.yiphotoshow = false;
+      this.shiphotoshow = true;
+      this.zhengphotoshow = false;
+      this.zhuphotoshow = false;
+      document.getElementById('bloc2').style.display = 'none';
+      document.getElementById('bloc4').style.display = 'none';
+      document.getElementById('bloc6').style.display = 'none';
+      document.getElementById('bloc8').style.display = 'inline';
+    } else if (window.scrollY + (1 / 2 * window.innerHeight) > document.getElementById('yi').clientHeight + document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight) {
       console.log('shi');
       this.yiphotoshow = false;
       this.shiphotoshow = true;
       this.zhengphotoshow = false;
+      this.zhuphotoshow = false;
       document.getElementById('bloc2').style.display = 'none';
       document.getElementById('bloc4').style.display = 'none';
       document.getElementById('bloc6').style.display = 'inline';
+      document.getElementById('bloc8').style.display = 'none';
     }else if(window.scrollY + (1 / 2 * window.innerHeight) > document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight) {
       console.log('yi');
       this.yiphotoshow = true;
       this.shiphotoshow = false;
       this.zhengphotoshow = false;
+      this.zhuphotoshow = false;
       document.getElementById('bloc2').style.display = 'none';
       document.getElementById('bloc4').style.display = 'inline';
       document.getElementById('bloc6').style.display = 'none';
+      document.getElementById('bloc8').style.display = 'none';
     }
     else{
       this.yiphotoshow = false;
       this.shiphotoshow = false;
       this.zhengphotoshow = true;
+      this.zhuphotoshow = false;
       document.getElementById('bloc4').style.display = 'none';
       document.getElementById('bloc2').style.display = 'inline';
       document.getElementById('bloc6').style.display = 'none';
+      document.getElementById('bloc8').style.display = 'none';
     }
   }
   ngOnInit() {
@@ -74,6 +90,8 @@ export class ProductComponent implements OnInit {
     console.log(document.referrer);
     document.getElementById('bloc6').style.display = 'none';
     document.getElementById('bloc4').style.display = 'none';
+    document.getElementById('bloc8').style.display = 'none';
+    document.getElementById('bloc2').style.display = 'inline';
   }
 
   chooseallproducts(){
@@ -96,6 +114,7 @@ export class ProductComponent implements OnInit {
     document.getElementById('bloc4').style.display = 'none';
     document.getElementById('bloc2').style.display = 'inline';
     document.getElementById('bloc6').style.display = 'none';
+    document.getElementById('bloc8').style.display = 'none';
   }
 
   yi(){
@@ -108,6 +127,31 @@ export class ProductComponent implements OnInit {
     document.getElementById('bloc2').style.display = 'none';
     document.getElementById('bloc4').style.display = 'inline';
     document.getElementById('bloc6').style.display = 'none';
+    document.getElementById('bloc8').style.display = 'none';
   }
+  shi(){
+    // window.location.hash = 'yi';
+    const elmnt = document.getElementById('shi');
+    elmnt.scrollIntoView();
+    this.yiphotoshow = false;
+    this.shiphotoshow = true;
+    this.zhengphotoshow = false;
+    document.getElementById('bloc2').style.display = 'none';
+    document.getElementById('bloc4').style.display = 'none';
+    document.getElementById('bloc6').style.display = 'inline';
+    document.getElementById('bloc8').style.display = 'none';
+  }
+  zhu(){
+    // window.location.hash = 'yi';
+    const elmnt = document.getElementById('zhu');
+    elmnt.scrollIntoView();
+    this.yiphotoshow = false;
+    this.shiphotoshow = true;
+    this.zhengphotoshow = false;
 
+    document.getElementById('bloc2').style.display = 'none';
+    document.getElementById('bloc4').style.display = 'none';
+    document.getElementById('bloc6').style.display = 'none';
+    document.getElementById('bloc8').style.display = 'inline';
+  }
 }
