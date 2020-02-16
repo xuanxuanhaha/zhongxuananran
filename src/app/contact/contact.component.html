@@ -21,68 +21,43 @@
       </button>
     </div>
   </div>
-
-<!--  <div class="row" style="position: relative;top: 100px; text-align: center">-->
-<!--    <div class="col-md-4">-->
-<!--      <a href="#" class="btn btn-info btn-lg">-->
-<!--        <span class="glyphicon glyphicon-envelope"></span> Envelope-->
-<!--      </a>-->
-<!--    </div>-->
-
-<!--    <div class="col-md-4">-->
-
-<!--    </div>-->
-
-<!--    <div class="col-md-4">-->
-
-<!--    </div>-->
-
-<!--  </div>-->
-
-
-
-
 </div>
 
 
 
 <div>
   <br>
-  <h1 style="margin-left: 30%;color: whitesmoke;margin-top: 50px">Contact online</h1>
+  <h1 style="margin-left: 30%;color: whitesmoke;margin-top: 50px">联系我们</h1>
   <hr  style="height:1px;color:#0072b8; background-color:#0072b8; margin-left: 500px; margin-right:500px" >
   <div class="container" style=" background:transparent;">
     <div class="userinputForm" style="background:transparent;opacity: 70%">
-      <form #frm="ngForm" (ngSubmit)="addUser(frm)" (click)="call()" id="myForm" style="background:transparent">
+      <form #frm="ngForm"  id="myForm" style="background:transparent">
         <div class="form-group">
-          <input type="text" name="name" class="form-control" ngModel #nameUser="ngModel" placeholder="Full Name *"
+          <input type="text" name="name" class="form-control" ngModel placeholder="Full Name *"
                  required pattern="[a-zA-Z][a-zA-Z ]+" id="usersName"
           >
         </div>
 
         <div class="form-group">
-          <input type="text" name="email" class="form-control" ngModel #emailContact="ngModel" placeholder="Email *"
+          <input type="text" name="email" class="form-control" ngModel  placeholder="Email *"
                  required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" id="usersEmail"
           >
         </div>
 
 
         <div class="form-group">
-          <input type="text" name="contact" class="form-control" ngModel #nameContact="ngModel" placeholder="Phone (optional). For example: 0400000000"
+          <input type="text" name="contact" class="form-control" ngModel  placeholder="Phone (optional). For example: 0400000000"
                  maxlength="10" minlength="10" pattern="[0-9]*" id="usersPhone"
           >
         </div>
-        <div *ngIf="nameContact?.touched" class="alert ">
-          <div [hidden]="!nameContact.hasError('minlength')">
-            Contact Invalid!
-          </div>
+
+
+        <div class="form-group">
+          <input type="text" name="company" class="form-control" ngModel placeholder="Company (optional)" id="usersCompany">
         </div>
 
         <div class="form-group">
-          <input type="text" name="company" class="form-control" ngModel #companyContact="ngModel" placeholder="Company (optional)" id="usersCompany">
-        </div>
-
-        <div class="form-group">
-          <select class="form-control" id="Select1" name="enquiry_type" required ngModel #typeContact="ngModel">
+          <select class="form-control" id="Select1" name="enquiry_type" required ngModel >
             <option value="" hidden selected>Select enquiry type</option>
             <option value="General enquiry"> General enquiry</option>
             <option value="Business enquiry">Business enquiry</option>
@@ -118,14 +93,14 @@
 <!--        <br>-->
 <!--      </div>-->
       <br>
-      <div style="width:100%">
-        <button  (click)="goHome()"  class="btn confirmbutton" > Back to Home page</button>
-      </div>
-      <br>
-      <br>
-      <div style="width:100%">
-        <button (click)="addAnother()"  class="btn confirmbutton" > + Add Another Enquiry</button>
-      </div>
+<!--      <div style="width:100%">-->
+<!--        <button  (click)="goHome()"  class="btn confirmbutton" > Back to Home page</button>-->
+<!--      </div>-->
+<!--      <br>-->
+<!--      <br>-->
+<!--      <div style="width:100%">-->
+<!--        <button (click)="addAnother()"  class="btn confirmbutton" > + Add Another Enquiry</button>-->
+<!--      </div>-->
       <br>
       <br>
     </div>
