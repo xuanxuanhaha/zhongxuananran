@@ -124,6 +124,8 @@ export class ProductComponent implements OnInit {
     document.getElementById('bloc8').style.display = 'none';
     document.getElementById('bloc2').style.display = 'inline';
     document.getElementById('navbarbackground1').style.display = 'none';
+
+    document.getElementById('allproduct').style.color = 'white';
   }
 
   chooseallproducts(){

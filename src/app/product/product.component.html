@@ -51,6 +51,16 @@
         <span class="highlight" style="font-size: 15px">Contact us</span>
       </button>
     </div>
+
+    <div [hidden]="!fourbuttonshow">
+
+
+      <div class="text" style="color: white;top: 0px;right: 50px;position: fixed;z-index: 10">
+        <div class="zhengbutton" style="margin-left: 60%;margin-right: 35%;background: white;height: 165px;width: 300px;">
+          <button style="width: 100%;height: 100%;background: orangered;color: black;font-size: 45px;" class="btn" (click)="zheng()"><p style="margin-left:40px;width:80px">蒸<span style="font-size: 1.3rem">&nbsp;房</span><br><p style="font-size: 0.9rem;margin-top: -5px">nano-spa room</p></button>
+        </div>
+      </div>
+    </div>
   </div>
 
 
@@ -65,31 +75,31 @@
   <div [hidden]="!fourbuttonshow">
 
 
-  <div class="text" style="color: white;top: 0px;right: 50px;position: fixed">
+  <div class="text" style="color: white;top: 0px;right: 50px;position: fixed;z-index: 10">
     <div class="zhengbutton" style="margin-left: 60%;margin-right: 35%;background: white;height: 165px;width: 300px;">
       <button style="width: 100%;height: 100%;background: orangered;color: black;font-size: 45px;" class="btn" (click)="zheng()"><p style="margin-left:40px;width:80px">蒸<span style="font-size: 1.3rem">&nbsp;房</span><br><p style="font-size: 0.9rem;margin-top: -5px">nano-spa room</p></button>
     </div>
   </div>
 
-  <div class="text" style="color: white;top: 165px;right: 50px;position: fixed">
+  <div class="text" style="color: white;top: 165px;right: 50px;position: fixed;z-index: 10">
     <div class="zhengbutton" style="margin-left: 60%;margin-right: 35%;background: white;height: 165px;width: 300px;">
       <button style="width: 100%;height: 100%;background: cadetblue;color: black;font-size: 45px;" class="btn" (click)="zhu()"><p style="margin-left:40px;width:80px">器<span style="font-size: 1.3rem">&nbsp;用</span><br><p style="font-size: 0.9rem;margin-top: -5px">nano-tool home</p></button>
     </div>
   </div>
 
-  <div class="text" style="color: white;top: 330px;right: 50px;position: fixed">
+  <div class="text" style="color: white;top: 330px;right: 50px;position: fixed;z-index: 10">
     <div class="zhengbutton" style="margin-left: 60%;margin-right: 35%;background: white;height: 165px;width: 300px;">
       <button style="width: 100%;height: 100%;background: pink;color: black;font-size: 45px;" class="btn" (click)="yi()"><p style="margin-left:40px;width:80px">暖<span style="font-size: 1.3rem">&nbsp;衣</span><br><p style="font-size: 0.9rem;margin-top: -5px">nano-cloth warm</p></button>
     </div>
   </div>
 
-  <div class="text" style="color: white;top: 495px;right: 50px;position: fixed">
+  <div class="text" style="color: white;top: 495px;right: 50px;position: fixed;z-index: 10">
     <div class="zhengbutton" style="margin-left: 60%;margin-right: 35%;background: white;height: 165px;width: 300px;">
       <button style="width: 100%;height: 100%;background: mediumpurple;color: black;font-size: 45px;" class="btn" (click)="shi()"><p style="margin-left:40px;width:80px">康<span style="font-size: 1.3rem">&nbsp;品</span><br><p style="font-size: 0.9rem;margin-top: -5px">nano-food health</p></button>
     </div>
   </div>
 
-    <button (click)="chooseallproducts()" style="background: transparent;border: 1px solid transparent;font-size: 3rem;position: fixed;right: 0" class="btn">
+    <button (click)="chooseallproducts()" style="background: transparent;border: 1px solid transparent;font-size: 3rem;position: fixed;right: 0;z-index: 999" class="btn">
       <span class="glyphicon glyphicon-remove-sign" ></span>
     </button>
 
