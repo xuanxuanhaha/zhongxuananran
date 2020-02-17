@@ -28,3 +28,48 @@
 {
   display:inline;
 }
+.animation1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  from {background-color: purple;}
+  to {background-color: transparent;}
+}
+#photoimage1 {
+  opacity: 1;
+}
+
+#hrline1, #hrline2, #hrline3, #hrline4{
+  border: 1px solid transparent;
+}
+#photoimage1:hover {
+  opacity: 0.5;
+  transition:2s;
+}
+#photofont{
+  color: transparent;
+}
+
+#photoimage1:hover ~ #hrline1{
+  border: 1px solid white;
+  transform: rotate(90deg);
+}
+#photoimage1:hover ~ #hrline2{
+  border: 1px solid white;
+}
+#photoimage1:hover ~ #hrline3{
+  border: 1px solid white;
+}
+#photoimage1:hover ~ #hrline4{
+  border: 1px solid white;
+  transform: rotate(90deg);
+}
+#photoimage1:hover ~ #photofont{
+  color: white;
+}
