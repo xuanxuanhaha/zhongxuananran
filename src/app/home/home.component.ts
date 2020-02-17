@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   zhutushow = false;
   yitushow = false;
   shitushow = false;
+  kaishishow = false;
 
   constructor() { }
 
@@ -37,7 +38,10 @@ export class HomeComponent implements OnInit {
     this.zhengtushow = false;
     this.yitushow = false;
     this.shitushow = false;
-    this.zhutushow = true;
+    this.zhutushow = false;
+    this.kaishishow = true;
+
+    window.scrollTo(0, 0);
   }
   zheng(){
     document.body.style.background = 'orangered';
@@ -49,6 +53,7 @@ export class HomeComponent implements OnInit {
     this.yitushow = false;
     this.shitushow = false;
     this.zhutushow = false;
+    this.kaishishow = false;
   }
   zhu(){
     document.body.style.background = 'cadetblue';
@@ -60,6 +65,7 @@ export class HomeComponent implements OnInit {
     this.yitushow = false;
     this.shitushow = false;
     this.zhutushow = true;
+    this.kaishishow = false;
   }
   yi(){
     document.body.style.background = 'pink';
@@ -71,6 +77,7 @@ export class HomeComponent implements OnInit {
     this.yitushow = true;
     this.shitushow = false;
     this.zhutushow = false;
+    this.kaishishow = false;
   }
   shi(){
     document.body.style.background = 'mediumpurple';
@@ -82,6 +89,7 @@ export class HomeComponent implements OnInit {
     this.yitushow = false;
     this.shitushow = true;
     this.zhutushow = false;
+    this.kaishishow = false;
   }
 
 }
