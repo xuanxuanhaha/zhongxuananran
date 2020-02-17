@@ -41,6 +41,7 @@ export class HomeComponent implements OnInit {
     this.zhutushow = false;
     this.kaishishow = true;
 
+    window.scrollTo(0, 0);
   }
   zheng(){
     document.body.style.background = 'orangered';

@@ -126,6 +126,8 @@ export class ProductComponent implements OnInit {
     document.getElementById('navbarbackground1').style.display = 'none';
 
     document.getElementById('allproduct').style.color = 'white';
+
+    window.scrollTo(0, 0);
   }
 
   chooseallproducts(){
