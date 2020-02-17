@@ -47,10 +47,16 @@ export class ProductComponent implements OnInit {
     //   this.yidivephotochange = false;
     // }
 
-    if(window.scrollY + (1 / 2 * window.innerHeight) >document.getElementById('zhu').clientHeight + document.getElementById('yi').clientHeight + document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight) {
+
+    console.log(document.getElementById('zhu').clientHeight);
+    console.log(document.getElementById('yi').clientHeight);
+    console.log(document.getElementById('shi').clientHeight);
+
+
+    if(window.scrollY + (1 / 2 * window.innerHeight) > document.getElementById('zhu').clientHeight + document.getElementById('yi').clientHeight + document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight) {
       console.log('zhu');
-      this.yiphotoshow = false;
-      this.shiphotoshow = true;
+      this.yiphotoshow = true;
+      this.shiphotoshow = false;
       this.zhengphotoshow = false;
       this.zhuphotoshow = false;
       document.getElementById('bloc2').style.display = 'none';
@@ -58,6 +64,8 @@ export class ProductComponent implements OnInit {
       document.getElementById('bloc6').style.display = 'none';
       document.getElementById('bloc8').style.display = 'inline';
       document.getElementById('allproduct').style.color = 'black';
+
+      document.getElementById('bloc7p').style.marginTop = '-400px';
       this.bgNo = 1;
     } else if (window.scrollY + (1 / 2 * window.innerHeight) > document.getElementById('yi').clientHeight + document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight) {
       console.log('shi');
@@ -69,6 +77,8 @@ export class ProductComponent implements OnInit {
       document.getElementById('bloc4').style.display = 'none';
 
       document.getElementById('bloc3p').style.marginTop = '0';
+
+      document.getElementById('bloc7p').style.marginTop = '0';
       document.getElementById('bloc6').style.display = 'inline';
       document.getElementById('bloc8').style.display = 'none';
 
