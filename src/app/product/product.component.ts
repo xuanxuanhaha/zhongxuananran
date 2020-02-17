@@ -67,6 +67,8 @@ export class ProductComponent implements OnInit {
       this.zhuphotoshow = false;
       document.getElementById('bloc2').style.display = 'none';
       document.getElementById('bloc4').style.display = 'none';
+
+      document.getElementById('bloc3p').style.marginTop = '0';
       document.getElementById('bloc6').style.display = 'inline';
       document.getElementById('bloc8').style.display = 'none';
 
@@ -83,6 +85,7 @@ export class ProductComponent implements OnInit {
       document.getElementById('bloc6').style.display = 'none';
       document.getElementById('bloc8').style.display = 'none';
       document.getElementById('allproduct').style.color = 'black';
+      document.getElementById('bloc3p').style.marginTop = '-400px';
       this.bgNo = 3;
     }
     else{
@@ -95,6 +98,7 @@ export class ProductComponent implements OnInit {
       document.getElementById('bloc6').style.display = 'none';
       document.getElementById('bloc8').style.display = 'none';
       document.getElementById('allproduct').style.color = 'white';
+      document.getElementById('bloc3p').style.marginTop = '0';
       this.bgNo = 4;
     }
   }
@@ -105,7 +109,7 @@ export class ProductComponent implements OnInit {
     document.getElementById('bloc6').style.display = 'none';
     document.getElementById('bloc4').style.display = 'none';
     document.getElementById('bloc8').style.display = 'none';
-    document.getElementById('bloc2').style.display = 'none';
+    document.getElementById('bloc2').style.display = 'inline';
     document.getElementById('navbarbackground1').style.display = 'none';
   }
 
