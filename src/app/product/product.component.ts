@@ -63,7 +63,7 @@ export class ProductComponent implements OnInit {
       document.getElementById('bloc4').style.display = 'none';
       document.getElementById('bloc6').style.display = 'none';
       document.getElementById('bloc8').style.display = 'inline';
-      document.getElementById('allproduct').style.color = 'black';
+      document.getElementById('allproduct').style.color = 'white';
       document.getElementById('bloc7p').style.marginTop = '-400px';
 
       document.getElementById('bloc7p').style.height = '1000px';
@@ -95,7 +95,7 @@ export class ProductComponent implements OnInit {
       document.getElementById('bloc4').style.display = 'inline';
       document.getElementById('bloc6').style.display = 'none';
       document.getElementById('bloc8').style.display = 'none';
-      document.getElementById('allproduct').style.color = 'black';
+      document.getElementById('allproduct').style.color = 'white';
       document.getElementById('bloc3p').style.marginTop = '-650px';
 
       document.getElementById('bloc3p').style.height = '750px';
