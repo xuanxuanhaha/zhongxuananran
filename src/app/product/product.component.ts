@@ -64,8 +64,9 @@ export class ProductComponent implements OnInit {
       document.getElementById('bloc6').style.display = 'none';
       document.getElementById('bloc8').style.display = 'inline';
       document.getElementById('allproduct').style.color = 'black';
-
       document.getElementById('bloc7p').style.marginTop = '-400px';
+
+      document.getElementById('bloc7p').style.height = '1000px';
       this.bgNo = 1;
     } else if (window.scrollY + (1 / 2 * window.innerHeight) > document.getElementById('yi').clientHeight + document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight) {
       console.log('shi');
@@ -95,7 +96,9 @@ export class ProductComponent implements OnInit {
       document.getElementById('bloc6').style.display = 'none';
       document.getElementById('bloc8').style.display = 'none';
       document.getElementById('allproduct').style.color = 'black';
-      document.getElementById('bloc3p').style.marginTop = '-400px';
+      document.getElementById('bloc3p').style.marginTop = '-650px';
+
+      document.getElementById('bloc3p').style.height = '750px';
       this.bgNo = 3;
     }
     else{
