@@ -15,7 +15,7 @@ export class ProductComponent implements OnInit {
   shiphotoshow = false;
   zhuphotoshow = false;
 
-  bgNo = 1;
+  bgNo = 4;
   constructor() { }
   @HostListener('window:scroll', [])
   onScroll(): void {
@@ -27,10 +27,13 @@ export class ProductComponent implements OnInit {
     console.log( document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight + document.getElementById('yi').clientHeight );
     console.log(window.innerHeight);
     console.log(window.scrollY + (1 / 2 * window.innerHeight));
-    if(window.scrollY > 100){
+    if(window.scrollY > 30){
+      document.getElementById('navbarbackground1').style.display = 'inline';
+      document.getElementById('navbarbackground1').style.backgroundColor = 'black';
       document.getElementById('navbarbackground').style.display = 'none';
     }else{
       document.getElementById('navbarbackground').style.display = 'inline';
+      document.getElementById('navbarbackground1').style.display = 'none';
     }
 
     // if(window.scrollY + (1 / 2 * window.innerHeight) > document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight){
@@ -44,16 +47,25 @@ export class ProductComponent implements OnInit {
     //   this.yidivephotochange = false;
     // }
 
-    if(window.scrollY + (1 / 2 * window.innerHeight) >document.getElementById('zhu').clientHeight + document.getElementById('yi').clientHeight + document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight) {
+
+    console.log(document.getElementById('zhu').clientHeight);
+    console.log(document.getElementById('yi').clientHeight);
+    console.log(document.getElementById('shi').clientHeight);
+
+
+    if(window.scrollY + (1 / 2 * window.innerHeight) > document.getElementById('zhu').clientHeight + document.getElementById('yi').clientHeight + document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight) {
       console.log('zhu');
-      this.yiphotoshow = false;
-      this.shiphotoshow = true;
+      this.yiphotoshow = true;
+      this.shiphotoshow = false;
       this.zhengphotoshow = false;
       this.zhuphotoshow = false;
       document.getElementById('bloc2').style.display = 'none';
       document.getElementById('bloc4').style.display = 'none';
       document.getElementById('bloc6').style.display = 'none';
       document.getElementById('bloc8').style.display = 'inline';
+      document.getElementById('allproduct').style.color = 'black';
+
+      document.getElementById('bloc7p').style.marginTop = '-400px';
       this.bgNo = 1;
     } else if (window.scrollY + (1 / 2 * window.innerHeight) > document.getElementById('yi').clientHeight + document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight) {
       console.log('shi');
@@ -63,8 +75,14 @@ export class ProductComponent implements OnInit {
       this.zhuphotoshow = false;
       document.getElementById('bloc2').style.display = 'none';
       document.getElementById('bloc4').style.display = 'none';
+
+      document.getElementById('bloc3p').style.marginTop = '0';
+
+      document.getElementById('bloc7p').style.marginTop = '0';
       document.getElementById('bloc6').style.display = 'inline';
       document.getElementById('bloc8').style.display = 'none';
+
+      document.getElementById('allproduct').style.color = 'white';
       this.bgNo = 2;
     }else if(window.scrollY + (1 / 2 * window.innerHeight) > document.getElementById('zheng').clientHeight + document.getElementById('navbarid').clientHeight) {
       console.log('yi');
@@ -76,6 +94,8 @@ export class ProductComponent implements OnInit {
       document.getElementById('bloc4').style.display = 'inline';
       document.getElementById('bloc6').style.display = 'none';
       document.getElementById('bloc8').style.display = 'none';
+      document.getElementById('allproduct').style.color = 'black';
+      document.getElementById('bloc3p').style.marginTop = '-400px';
       this.bgNo = 3;
     }
     else{
@@ -87,6 +107,8 @@ export class ProductComponent implements OnInit {
       document.getElementById('bloc2').style.display = 'inline';
       document.getElementById('bloc6').style.display = 'none';
       document.getElementById('bloc8').style.display = 'none';
+      document.getElementById('allproduct').style.color = 'white';
+      document.getElementById('bloc3p').style.marginTop = '0';
       this.bgNo = 4;
     }
   }
@@ -98,6 +120,7 @@ export class ProductComponent implements OnInit {
     document.getElementById('bloc4').style.display = 'none';
     document.getElementById('bloc8').style.display = 'none';
     document.getElementById('bloc2').style.display = 'inline';
+    document.getElementById('navbarbackground1').style.display = 'none';
   }
 
   chooseallproducts(){
